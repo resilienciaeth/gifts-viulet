@@ -50,9 +50,9 @@ export default function Home() {
 
       {/* Title and Subtitle */}
       <div className="w-full max-w-2xl px-4 -mt-20 pb-12 text-center relative z-10">
-        <h1 className="text-4xl font-bold text-white mb-4">Benjamin Viulet</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Be Welcomed To My Mirrors</h1>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Welcome to my world, where whispers become visions. Here are some gifts to begin your seeker&apos;s journey—may they light the path inward.
+          May these Mirrors of mine work as daily reminders slowly guiding you into the truth of who you really are. May they help you find love, insight and joy. Thank you for sharing this journey alongside me. BV
         </p>
       </div>
 
