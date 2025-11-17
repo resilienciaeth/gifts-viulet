@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: ["/images/viulet.png"],
   },
   other: {
-    "sa-verify": "ipc5artviuletc5",
+    "sa-verify": "giftsmirroi7lccnq58mabt",
   },
 };
 
