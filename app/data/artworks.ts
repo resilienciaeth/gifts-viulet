@@ -511,5 +511,54 @@ BV.`,
     soldOut: false,
     eventName: "click_letters_to_the_subconscious",
   },
+  {
+    id: 7,
+    slug: "dreamfisher",
+    title: "Dreamfisher (The Mermaid Catcher)",
+    image: "/images/mermaid.webp",
+    wallpaperLink: "/gifts/Benjamin Viulet - Dreamfisher - Wallpaper Edition.jpg",
+    mirrorLink: "https://mirrorsbyviulet.com/products/dreamfisher?utm_source=giftspage&utm_medium=wallpapers&utm_campaign=giftslink&utm_id=1",
+    mirrorsWhisper: `"Deep inside you, between what you remember and what you were trained to forget, there is a hole in the ice. And over it he waits. The Dreamfisher.
+
+His back is bent from years of watching hope drown. Snow crusts his coat, because the kingdom of intellect is cold and sterile and proud of it. He listens, always listening.
+
+The moment the water trembles, the moment something stirs, he smiles.
+
+"Oh. You dreamed again."
+
+What was it this time? To create? To leave? To feel alive in your own body? To be free? To be more than this?
+
+His mouth curls, not in anger, in amusement.
+
+Slowly, with ritual precision, he prepares the bait. Not knives. Not chains. Brains. Reason. Logic. Facts. The most delicious poison you know.
+
+"Oh, you want to be an artist," he whispers. "Everyone knows artists are obsolete now. AI replaced them. You are already late."
+
+"Oh, you want to travel. How cute. With what money?"
+
+You want your own life. Your own work. Your own voice.
+
+Be serious.
+
+People like you do not get that.
+
+And you, sweet child, already tired, already bruised, already taught to survive instead of live, you bite.
+
+Because reason feels safe. Because excuses feel warm. Because victimhood lets you rest without choosing.
+
+Because if you admit that someone with your same fear, your same pain, your same conditions stood up and chose anyway, then the weight falls on you. And that is terrifying.
+
+So you let him speak. About governments. About parents. About systems. About fate. About how powerless you are. And you nod, because it hurts less than responsibility.
+
+The hook sinks in. And he pulls.
+
+Your hair breaks the surface first, red like a warning, your skin pale like something that never got to bloom.
+
+You follow words instead of the ache in your chest. You follow definitions instead of the pull."
+
+—BV`,
+    soldOut: false,
+    eventName: "click_dreamfisher",
+  },
 ];
 
