@@ -58,6 +58,27 @@ export default function Home() {
 
       {/* Collection Cards */}
       <div className="w-full max-w-2xl px-4 pb-16 space-y-4">
+        {/* Avalon Letters */}
+        <a
+          href="https://mirrorsbyviulet.com/pages/avalon?utm_source=freegiftswebsite&utm_campaign=oldlanding&utm_medium=gifts"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center bg-black overflow-hidden shadow-md transition-shadow duration-300 border border-gray-700 relative hover:shadow-xl max-h-32"
+        >
+          <div className="w-32 h-32 relative flex-shrink-0">
+            <Image
+              src="/images/avalon1.png"
+              alt="The Avalon Letters"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col justify-center px-4 py-3 flex-1">
+            <h3 className="text-lg font-medium text-white">Join the Avalon Letters</h3>
+            <p className="text-xs text-gray-400 mt-1">every month i send you a mirror to your home, alongside a letter</p>
+          </div>
+        </a>
+
         {artworks.map((artwork) => (
           <CollectionCard 
             key={artwork.id} 
