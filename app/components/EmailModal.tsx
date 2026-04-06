@@ -71,12 +71,9 @@ export default function EmailModal({ open, onClose, onSuccess }: EmailModalProps
           <X size={20} />
         </button>
 
-        <h2 className="text-2xl font-bold text-white text-center mb-2">
+        <h2 className="text-2xl font-bold text-white text-center mb-8">
           Get Your Free Wallpaper
         </h2>
-        <p className="text-gray-400 text-center text-sm mb-8">
-          Enter your email to download and join the Avalon Letters.
-        </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
@@ -101,9 +98,6 @@ export default function EmailModal({ open, onClose, onSuccess }: EmailModalProps
           </button>
         </form>
 
-        <p className="text-gray-600 text-xs text-center mt-6">
-          No spam. Unsubscribe anytime.
-        </p>
       </div>
     </div>
   );

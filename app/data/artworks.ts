@@ -12,6 +12,51 @@ export interface Artwork {
 
 export const artworks: Artwork[] = [
   {
+    id: 8,
+    slug: "she-who-chose-the-cut",
+    title: "She Who Chose The Cut (The Inward Horn)",
+    image: "/images/shewho.png",
+    wallpaperLink: "/gifts/Benjamin Viulet - She Who Chose The Cut (The Inward Horn) - Wallpaper Edition.jpg",
+    mirrorLink: "https://mirrorsbyviulet.com/products/she-who-chose-the-cut?utm_source=giftspage&utm_medium=wallpapers&utm_campaign=giftslink&utm_id=1",
+    mirrorsWhisper: `The Mirror's Whisper is the voice behind the creation.
+
+This is what She Who Chose The Cut (The Inward Horn) has to say:
+
+"There is a horn growing inside of you and you have been tending to it. Protecting it. Nursing it Oh yes...
+
+The job you hate but stay in. The partner you love who has not truly seen you in years. The family that needs you so desperately that you disappeared entirely inside their need. Oh you know what horn I am talking about.
+
+Yes. Do not look away from me now.
+
+The horn grows inward my love. It does not announce itself. It simply turns. Slowly. Into the very center of you. And the most devastating part is not the pain. But that you convinced yourself the pain was normal. That this is what life feels like. That everyone walks around with this pressure behind the eyes, this quiet scream in the throat that never quite becomes a sound.
+
+They do not.
+
+That particular horn is yours alone. And it has a name. And you have been refusing to say it out loud because the moment you do you cannot unsay it and then what. Then what do you do with all the years you gave it?? All the mornings you woke up and chose it again. And again. And again.
+
+Yes the horn grows inwards, look at her, look at you...
+
+But look at her hand.
+
+A blade. Already bleeding. Not from the cut. From the grip. From holding the instrument of her own freedom so tightly, for so long, without once using it.
+
+You are not your suffering. You are not your endurance. You are not the years you "wasted". You are not the love you gave to someone who buried it in the yard and forgot where.
+
+You are what remains when all of that is cut away. When the Horn is cut away!
+
+The cut will hurt. I will not lie to you. It will hurt like birth. Like the first breath of a child who screamed not from pain but from the shock of being finally, completely, terrifyingly alive.
+
+Yet you will be free. Not free like the world sells you freedom. Free like a woman who looked at the thing that was killing her and said
+
+I loved you. But you are not me. You were never me.
+
+For I Am She Who Chose The Cut."
+
+BV`,
+    soldOut: false,
+    eventName: "click_she_who_chose_the_cut",
+  },
+  {
     id: 1,
     slug: "the-girl-who-burned",
     title: "The Girl Who Burned",
@@ -559,51 +604,6 @@ You follow words instead of the ache in your chest. You follow definitions inste
 —BV`,
     soldOut: false,
     eventName: "click_dreamfisher",
-  },
-  {
-    id: 8,
-    slug: "she-who-chose-the-cut",
-    title: "She Who Chose The Cut (The Inward Horn)",
-    image: "/images/shewho.png",
-    wallpaperLink: "/gifts/Benjamin Viulet - She Who Chose The Cut (The Inward Horn) - Wallpaper Edition.jpg",
-    mirrorLink: "https://mirrorsbyviulet.com/products/she-who-chose-the-cut?utm_source=giftspage&utm_medium=wallpapers&utm_campaign=giftslink&utm_id=1",
-    mirrorsWhisper: `The Mirror's Whisper is the voice behind the creation.
-
-This is what She Who Chose The Cut (The Inward Horn) has to say:
-
-"There is a horn growing inside of you and you have been tending to it. Protecting it. Nursing it Oh yes...
-
-The job you hate but stay in. The partner you love who has not truly seen you in years. The family that needs you so desperately that you disappeared entirely inside their need. Oh you know what horn I am talking about.
-
-Yes. Do not look away from me now.
-
-The horn grows inward my love. It does not announce itself. It simply turns. Slowly. Into the very center of you. And the most devastating part is not the pain. But that you convinced yourself the pain was normal. That this is what life feels like. That everyone walks around with this pressure behind the eyes, this quiet scream in the throat that never quite becomes a sound.
-
-They do not.
-
-That particular horn is yours alone. And it has a name. And you have been refusing to say it out loud because the moment you do you cannot unsay it and then what. Then what do you do with all the years you gave it?? All the mornings you woke up and chose it again. And again. And again.
-
-Yes the horn grows inwards, look at her, look at you...
-
-But look at her hand.
-
-A blade. Already bleeding. Not from the cut. From the grip. From holding the instrument of her own freedom so tightly, for so long, without once using it.
-
-You are not your suffering. You are not your endurance. You are not the years you "wasted". You are not the love you gave to someone who buried it in the yard and forgot where.
-
-You are what remains when all of that is cut away. When the Horn is cut away!
-
-The cut will hurt. I will not lie to you. It will hurt like birth. Like the first breath of a child who screamed not from pain but from the shock of being finally, completely, terrifyingly alive.
-
-Yet you will be free. Not free like the world sells you freedom. Free like a woman who looked at the thing that was killing her and said
-
-I loved you. But you are not me. You were never me.
-
-For I Am She Who Chose The Cut."
-
-BV`,
-    soldOut: false,
-    eventName: "click_she_who_chose_the_cut",
   },
 ];
 
