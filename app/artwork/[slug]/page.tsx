@@ -15,28 +15,23 @@ export default function ArtworkPage() {
 
   const artwork = artworks.find((art) => art.slug === slug);
 
-  if (!artwork) {
-    return (
-      <main className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-4">
-        <h1 className="text-2xl font-bold text-white mb-4">Artwork Not Found</h1>
-        <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-          ← Back to Home
-        </Link>
-      </main>
-    );
-  }
-
-  const triggerDownload = () => {
+  const triggerDownload = useCallback(() => {
+    if (!artwork?.wallpaperLink) return;
     const link = document.createElement("a");
     link.href = artwork.wallpaperLink;
     link.download = artwork.wallpaperLink.split("/").pop() || "wallpaper.jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, [artwork?.wallpaperLink]);
 
-  const handleWallpaperDownload = () => {
-    if (!artwork.wallpaperLink) {
+  const handleSubscriptionSuccess = useCallback(() => {
+    setShowModal(false);
+    triggerDownload();
+  }, [triggerDownload]);
+
+  const handleWallpaperDownload = useCallback(() => {
+    if (!artwork?.wallpaperLink) {
       alert("Wallpaper will be available soon!");
       return;
     }
@@ -47,20 +42,26 @@ export default function ArtworkPage() {
     } else {
       setShowModal(true);
     }
-  };
+  }, [artwork?.wallpaperLink, triggerDownload]);
 
-  const handleSubscriptionSuccess = useCallback(() => {
-    setShowModal(false);
-    triggerDownload();
-  }, [artwork.wallpaperLink]);
-
-  const handleMirrorClick = () => {
-    if (!artwork.mirrorLink) {
+  const handleMirrorClick = useCallback(() => {
+    if (!artwork?.mirrorLink) {
       alert("Mirror link will be added soon!");
       return;
     }
     window.open(artwork.mirrorLink, "_blank");
-  };
+  }, [artwork?.mirrorLink]);
+
+  if (!artwork) {
+    return (
+      <main className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-4">
+        <h1 className="text-2xl font-bold text-white mb-4">Artwork Not Found</h1>
+        <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+          ← Back to Home
+        </Link>
+      </main>
+    );
+  }
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center bg-black">
