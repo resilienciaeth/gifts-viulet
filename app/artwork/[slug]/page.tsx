@@ -1,19 +1,20 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { artworks } from "@/app/data/artworks";
 import { ArrowLeft } from "lucide-react";
+import EmailModal from "@/app/components/EmailModal";
 
 export default function ArtworkPage() {
   const params = useParams();
   const slug = params.slug as string;
+  const [showModal, setShowModal] = useState(false);
 
-  // Find the artwork by slug
   const artwork = artworks.find((art) => art.slug === slug);
 
-  // If artwork not found, show error
   if (!artwork) {
     return (
       <main className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-4">
@@ -25,20 +26,33 @@ export default function ArtworkPage() {
     );
   }
 
+  const triggerDownload = () => {
+    const link = document.createElement("a");
+    link.href = artwork.wallpaperLink;
+    link.download = artwork.wallpaperLink.split("/").pop() || "wallpaper.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleWallpaperDownload = () => {
     if (!artwork.wallpaperLink) {
       alert("Wallpaper will be available soon!");
       return;
     }
-    
-    // Create a temporary link element to trigger download
-    const link = document.createElement('a');
-    link.href = artwork.wallpaperLink;
-    link.download = artwork.wallpaperLink.split('/').pop() || 'wallpaper.jpg';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+    const alreadySubscribed = localStorage.getItem("viulet_subscribed") === "true";
+    if (alreadySubscribed) {
+      triggerDownload();
+    } else {
+      setShowModal(true);
+    }
   };
+
+  const handleSubscriptionSuccess = useCallback(() => {
+    setShowModal(false);
+    triggerDownload();
+  }, [artwork.wallpaperLink]);
 
   const handleMirrorClick = () => {
     if (!artwork.mirrorLink) {
@@ -50,6 +64,11 @@ export default function ArtworkPage() {
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center bg-black">
+      <EmailModal
+        open={showModal}
+        onClose={() => setShowModal(false)}
+        onSuccess={handleSubscriptionSuccess}
+      />
       {/* Back Button */}
       <div className="w-full max-w-4xl px-4 pt-8">
         <Link 
@@ -73,6 +92,7 @@ export default function ArtworkPage() {
             src={artwork.image}
             alt={artwork.title}
             fill
+            sizes="(max-width: 896px) 100vw, 896px"
             className="object-cover"
             priority
           />

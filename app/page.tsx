@@ -16,6 +16,7 @@ const CollectionCard = ({ title, slug, image, soldOut }: { title: string; slug: 
           src={image}
           alt={title}
           fill
+          sizes="128px"
           className="object-cover"
         />
       </div>
@@ -70,6 +71,7 @@ export default function Home() {
               src="/images/avalon1.png"
               alt="The Avalon Letters"
               fill
+              sizes="128px"
               className="object-cover"
             />
           </div>
